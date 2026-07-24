@@ -24,11 +24,7 @@ Este proyecto se publica como una **Biblioteca de Apps Script** ("Master Library
 
 ## Fases 2 y 3 — Reporte Comparativo Mensual
 
-- Lee la pestaña `Monthly Budget` e identifica las categorías principales según el **formato de texto** de la columna C (negrita + subrayado = categoría; negrita que empieza con "Total" = cierre de categoría; sin negrita = concepto individual), ya que la hoja no tiene columnas separadas de categoría/sub-categoría.
-- Solo procesa la sección "Expenses & Debt Service" (se enfoca en sobregiros de gasto, no de ingreso).
-- Calcula el total planificado vs. real por categoría y marca una desviación como significativa a partir de **15%** (`DEVIATION_THRESHOLD`).
-- Para las categorías sobregiradas, lista los conceptos individuales responsables con su monto real vs. planificado.
-- La salida se entrega como un **borrador de Gmail** (`GmailApp.createDraft`) en formato HTML, listo para revisar y enviar al cliente.
+-Lee la pestaña Monthly Budget e identifica la jerarquía de datos según la columna en la que aparece cada texto, ya que la hoja no tiene columnas separadas de categoría/sub-categoría dedicadas: columna A = sección (ej. "Income", "Expenses & Debt Service"), columna B = categoría principal (ej. "Shelter", "Grocery") o su cierre ("Total X"), columna C = concepto individual (ej. "Mortgage").
 
 
 
