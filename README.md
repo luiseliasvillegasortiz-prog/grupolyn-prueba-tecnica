@@ -30,18 +30,7 @@ Este proyecto se publica como una **Biblioteca de Apps Script** ("Master Library
 - Para las categorías sobregiradas, lista los conceptos individuales responsables con su monto real vs. planificado.
 - La salida se entrega como un **borrador de Gmail** (`GmailApp.createDraft`) en formato HTML, listo para revisar y enviar al cliente.
 
-- /**
- * ============================================================
- * FASE 2: Lógica del Reporte Comparativo
- * ============================================================
- * Ajustada a la estructura real de "Monthly Budget":
- * - No hay columnas separadas para Categoría/Sub-categoría dedicadas.
- * - La jerarquía se identifica por la COLUMNA en la que aparece el texto:
- *     Columna A -> Sección (ej. "Income", "Expenses & Debt Service") - se ignora como agrupador
- *     Columna B -> Categoría (ej. "Shelter", "Person 1") o su cierre ("Total X")
- *     Columna C -> Concepto individual dentro de la categoría actual
- * - Solo se procesan categorías dentro de la sección "Expenses & Debt Service".
- */
+
 
 ## Fase 4 (Bonus) — Despliegue masivo a clientes
 
